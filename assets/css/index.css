@@ -1,0 +1,160 @@
+
+/* --- VARIABLES DE COULEURS (Inspirées de votre logo) --- */
+:root {
+    --primary-green: #006a4e; /* Le vert de votre logo */
+    --accent-gold: #c59d5f;    /* La couleur dorée/marron clair */
+    --bg-light: #f9f9f9;
+    --text-dark: #333333;
+    --white: #ffffff;
+}
+
+/* --- STYLES GÉNÉRAUX --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding-bottom: 80px; /* Espace pour le panier flottant */
+}
+
+/* --- NAVBAR --- */
+nav {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav h1 {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* --- MENU CONTAINER --- */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.category-title {
+    color: var(--primary-green);
+    margin: 30px 0 15px 0;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--accent-gold);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* --- CARTES DES PLATS --- */
+.menu-item {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.item-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.item-info p {
+    color: var(--accent-gold);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* --- BOUTONS D'AJOUT --- */
+.btn-add {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #004d38;
+}
+
+/* --- PANIER FLOTTANT --- */
+#cart-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#cart-bar.active {
+    transform: translateY(0);
+}
+
+#cart-total {
+    font-weight: bold;
+    color: var(--primary-green);
+    font-size: 1.2rem;
+}
+
+#btn-whatsapp {
+    background-color: #25D366; /* Couleur officielle WhatsApp */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+#btn-whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+/* --- MODAL PANIER (Optionnel, pour voir le détail) --- */
+.cart-details {
+    font-size: 0.9rem;
+    color: #666;
+    margin-right: 15px;
+}

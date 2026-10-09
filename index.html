@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hôtel Palmersaie - Restaurant</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h1>Hôtel Palmersaie</h1>
+    </nav>
+
+    <!-- CONTENU DU MENU -->
+    <div class="container">
+        
+        <h2 class="category-title">Entrées</h2>
+        
+        <div class="menu-item" data-id="1" data-name="Salade Palmersaie" data-price="1500">
+            <div class="item-info">
+                <h3>Salade Palmersaie</h3>
+                <p>1 500 FDJ</p>
+            </div>
+            <button class="btn-add" onclick="addToCart(this)">+</button>
+        </div>
+
+        <div class="menu-item" data-id="2" data-name="Samoussas (x3)" data-price="1000">
+            <div class="item-info">
+                <h3>Samoussas (x3)</h3>
+                <p>1 000 FDJ</p>
+            </div>
+            <button class="btn-add" onclick="addToCart(this)">+</button>
+        </div>
+
+        <h2 class="category-title">Plats Principaux</h2>
+
+        <div class="menu-item" data-id="3" data-name="Poulet Yassa" data-price="3500">
+            <div class="item-info">
+                <h3>Poulet Yassa</h3>
+                <p>3 500 FDJ</p>
+            </div>
+            <button class="btn-add" onclick="addToCart(this)">+</button>
+        </div>
+
+        <div class="menu-item" data-id="4" data-name="Poisson Grillé" data-price="4500">
+            <div class="item-info">
+                <h3>Poisson Grillé (Capitaine)</h3>
+                <p>4 500 FDJ</p>
+            </div>
+            <button class="btn-add" onclick="addToCart(this)">+</button>
+        </div>
+
+        <div class="menu-item" data-id="5" data-name="Burger Palmersaie" data-price="3000">
+            <div class="item-info">
+                <h3>Burger Palmersaie</h3>
+                <p>3 000 FDJ</p>
+            </div>
+            <button class="btn-add" onclick="addToCart(this)">+</button>
+        </div>
+
+        <h2 class="category-title">Boissons</h2>
+
+        <div class="menu-item" data-id="6" data-name="Jus de Mangue Frais" data-price="800">
+            <div class="item-info">
+                <h3>Jus de Mangue Frais</h3>
+                <p>800 FDJ</p>
+            </div>
+            <button class="btn-add" onclick="addToCart(this)">+</button>
+        </div>
+
+        <div class="menu-item" data-id="7" data-name="Eau Minérale 50cl" data-price="300">
+            <div class="item-info">
+                <h3>Eau Minérale 50cl</h3>
+                <p>300 FDJ</p>
+            </div>
+            <button class="btn-add" onclick="addToCart(this)">+</button>
+        </div>
+
+    </div>
+
+    <!-- PANIER FLOTTANT -->
+    <div id="cart-bar">
+        <div>
+            <div id="cart-total">Total: 0 FDJ</div>
+            <div class="cart-details" id="cart-items-preview">Aucun article</div>
+        </div>
+        <button id="btn-whatsapp" onclick="sendOrderToWhatsApp()">
+            Commander sur WhatsApp
+        </button>
+    </div>
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
