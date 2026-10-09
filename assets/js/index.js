@@ -58,7 +58,7 @@ function updateCartUI() {
 
 // Fonction pour envoyer la commande sur WhatsApp
 function sendOrderToWhatsApp() {
-    let message = "Bonjour Hôtel Palmersaie, je souhaite passer une commande :\n\n";
+    let message = "Bonjour Hôtel Palmeraie, je souhaite passer une commande :\n\n";
     let total = 0;
 
     for (let id in cart) {
